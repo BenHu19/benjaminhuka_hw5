@@ -1,0 +1,136 @@
+/* Live search and search history styles */
+.search-loading-indicator {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    z-index: 10;
+}
+
+.search-container {
+    position: relative;
+}
+
+/* Search history container */
+#search-history-container {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    padding: 15px;
+}
+
+#search-history-container h3 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.search-history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-history-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.search-history-item:last-child {
+    border-bottom: none;
+}
+
+.search-history-item a {
+    color: #555;
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+.search-history-item a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.delete-history-item {
+    background: none;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 5px;
+}
+
+.delete-history-item:hover {
+    color: #ff6b6b;
+}
+
+.clear-history-btn {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #666;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.clear-history-btn:hover {
+    background: #f2f2f2;
+    color: #ff6b6b;
+}
+
+/* Live search dropdown styles */
+.search-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 100;
+    display: none;
+}
+
+.search-dropdown-result {
+    padding: 10px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.search-dropdown-result:last-child {
+    border-bottom: none;
+}
+
+.search-dropdown-result:hover {
+    background: #f9f9f9;
+}
+
+.search-dropdown-result h4 {
+    margin: 0 0 5px 0;
+    font-size: 0.9rem;
+}
+
+.search-dropdown-result p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.search-dropdown-result a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}

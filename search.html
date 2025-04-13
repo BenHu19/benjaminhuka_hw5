@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - News Briefing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\utility-styles.css">
+    <link rel="stylesheet" href="css\search-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghZ+ZmzWT06R5v6NSk3ZUfsH6FNEDepLx9hPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/visualContent.js"></script>
+    <script src="js/article.js"></script>
+    <script src="js/search.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-toggle">
+            <a href="article.html" title="hamburger-link"><i class="fa-solid fa-bars"></i></a>
+        </div>
+        <div class="navbar-logo">
+            <a href="index.html">
+                <img src="images\logo.png" alt="BeNews Website Logo">
+            </a>
+        </div>
+        <div class="navbar-links">
+            <a href="article.html">Latest News</a>
+            <a href="#">Login</a>
+            <div class="search-container">
+                <form id="search-form" action="search.html" method="GET">
+                    <input type="text" name="q" id="search-input" placeholder="Search...">
+                    <button type="submit" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="search-results">
+            <h1>Search Results</h1>
+            <p id="search-query-display"></p>
+            
+            <!-- Search history container -->
+            <div id="search-history-container">
+                <!-- Search history will be inserted here by JavaScript -->
+            </div>
+            
+            <div id="search-results-container" class="news-grid">
+                <!-- Search results will be displayed here dynamically -->
+                <div class="loading-message">Loading results...</div>
+            </div>
+            <div id="no-results-message">
+                <p>No results found. Please try a different search term.</p>
+            </div>
+            
+            <!-- Clear history button -->
+            <button id="clear-history-btn" class="clear-history-btn" onclick="clearSearchHistory()">
+                Clear Search History
+            </button>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="copyright">
+            <p>© BeNews 2025</p>
+        </div>
+    </footer>
+</body>
+</html>

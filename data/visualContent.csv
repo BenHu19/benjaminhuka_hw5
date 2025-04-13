@@ -1,0 +1,17 @@
+ID,Name,Description,Short Name,File Type,CSS Class,Article ID
+1,Hero Image,Main hero image for the index page,hero.jpg,image,hero-image,index-hero-image
+2,Additional News 1,Small image for additional news 1 on index page,small-img.jpg,image,small-image,index-additional-news-1
+3,Additional News 2,Small image for additional news 2 on index page,small-img2.jpg,image,small-image,index-additional-news-2
+4,Additional News 3,Small image for additional news 3 on index page,small-img3.jpg,image,small-image,index-additional-news-3
+5,Additional News 4,Small image for additional news 4 on index page,small-img4.jpg,image,small-image,index-additional-news-4
+6,News Article 1,Medium image for news article 1 on index page,medium-img1.jpg,image,news-article,index-news-article-1
+7,News Article 2,Video for news article 2 on index page,video.mp4,video,news-article,index-news-article-2
+8,News Article 3,Medium image for news article 3 on index page,medium-img3.jpg,image,news-article,index-news-article-3
+9,News Article 4,Medium image for news article 4 on index page,medium-img4.jpg,image,news-article,index-news-article-4
+10,Hero Image,Main hero image for the article,hero.jpg,image,article-hero,article-hero-image
+11,Additional News 1,Small image for additional news 1,small-img.jpg,image,small-image-article,additional-news-1
+12,Additional News 2,Small image for additional news 2,small-img3.jpg,image,small-image-article,additional-news-2
+13,Recommended Article 1,Medium image for recommended article 1,medium-img1.jpg,image,recommended-article,recommended-article-1
+14,Recommended Article 2,Medium image for recommended article 2,medium-img2.jpg,image,recommended-article,recommended-article-2
+15,Recommended Article 3,Medium image for recommended article 3,medium-img3.jpg,image,recommended-article,recommended-article-3
+16,Recommended Article 4,Medium image for recommended article 4,medium-img4.jpg,image,recommended-article,recommended-article-4

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Article</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\utility-styles.css">
+    <link rel="stylesheet" href="css\comments-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghZ+ZmzWT06R5v6NSk3ZUfsH6FNEDepLx9hPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/visualContent.js"></script>
+    <script src="js/article.js"></script>
+    <script src="js/article-interactions.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-toggle">
+            <a href="article.html" title="hamburger-link"><i class="fa-solid fa-bars"></i></a>
+        </div>
+        <div class="navbar-logo">
+            <a href="index.html">
+                <img src="images\logo.png" alt="BeNews Website Logo">
+            </a>
+        </div>
+        <div class="navbar-links">
+            <a href="index.html">Home</a>
+            <a href="article.html" class="active">Latest News</a>
+            <a href="admin.html">Admin</a>
+        </div>
+    </nav>
+
+    <header class="hero-grid">
+        <div class="article-header">
+            <h1 data-article-content="1" data-content-type="name"></h1>
+            <!-- New Info Box -->
+            <div class="article-info-box">
+                <div id="weather-info" class="weather-section">
+                    <img id="weather-icon" src="" alt="Weather icon">
+                    <div class="weather-details">
+                        <span id="weather-location"></span></br>
+                        <span id="weather-description"></span>
+                        <span id="weather-temp"></span>
+                    </div>
+                </div>
+                <div id="pokemon-info" class="pokemon-section">
+                    <img id="pokemon-sprite" src="" alt="Pokemon sprite">
+                    <span id="pokemon-name"></span>
+                </div>
+            </div>
+            <div class="article-hero" id="article-hero-image">
+                <div id="article-visual-content" class="article-hero-image"></div>
+            </div>
+        </div>
+        <section class="article-body">
+            <p data-article-content="1" data-content-type="description"></p>
+
+            <!-- Article Interaction Section -->
+            <div class="article-interactions">
+                <div class="like-section">
+                    <button id="like-button" class="like-button">
+                        <i class="far fa-heart like-icon"></i>
+                        <span class="like-count">0</span> Likes
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Comments Section -->
+            <div class="comments-section">
+                <h3>Comments (<span id="comment-count">0</span>)</h3>
+                
+                <form id="comment-form">
+                    <div class="form-group">
+                        <label for="commenter-name">Name</label>
+                        <input type="text" id="commenter-name" name="commenter-name" placeholder="Your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comment-text">Comment</label>
+                        <textarea id="comment-text" name="comment-text" placeholder="Add your comment..." rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-comment-btn">Post Comment</button>
+                </form>
+                
+                <div class="comments-container" id="comments-container">
+                    <!-- Comments will be loaded here dynamically -->
+                    <div class="no-comments">Be the first to comment!</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="small-images-section">
+            <h2>More News</h2>
+            <div class="small-images-grid">
+                <div class="small-image-article" id="additional-news-1">
+                    <div data-visual-content="additional-news-1"></div>
+                    <p>
+                        <span data-article-content="2" data-content-type="name"></span>
+                        <a href="article.html?id=2"> Read More</a>
+                    </p>
+                </div>
+
+                <div class="small-image-article" id="additional-news-2">
+                    <div data-visual-content="additional-news-2"></div>
+                    <p>
+                        <span data-article-content="4" data-content-type="name"></span>
+                        <a href="article.html?id=4"> Read More</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section class="recommended-articles">
+        <h2>Recommended Articles</h2>
+        <div class="recommended-grid">
+            <article class="recommended-article" id="recommended-article-1">
+                <div data-visual-content="recommended-article-1"></div>
+                <h3 data-article-content="6" data-content-type="name"></h3>
+                <p data-article-content="6" data-content-type="description"></p>
+                <a href="article.html?id=6">Read More</a>
+            </article>
+            <article class="recommended-article" id="recommended-article-2">
+                <div data-visual-content="recommended-article-2"></div>
+                <h3 data-article-content="7" data-content-type="name"></h3>
+                <p data-article-content="7" data-content-type="description"></p>
+                <a href="article.html?id=7">Read More</a>
+            </article>
+            <article class="recommended-article" id="recommended-article-3">
+                <div data-visual-content="recommended-article-3"></div>
+                <h3 data-article-content="8" data-content-type="name"></h3>
+                <p data-article-content="8" data-content-type="description"></p>
+                <a href="article.html?id=8">Read More</a>
+            </article>
+            <article class="recommended-article" id="recommended-article-4">
+                <div data-visual-content="recommended-article-4"></div>
+                <h3 data-article-content="9" data-content-type="name"></h3>
+                <p data-article-content="9" data-content-type="description"></p>
+                <a href="article.html?id=9">Read More</a>
+            </article>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="copyright">
+            <p>© BeNews 2025</p>
+        </div>
+    </footer>
+</body>
+</html>
