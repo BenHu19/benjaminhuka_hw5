@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF; 
+}
+
+.news-article a, .recommended-article a, .small-images-section a {
+    color: #0C234B
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0C234B;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.navbar-links a {
+    color: #EF4056;
+    margin-left: 10px;
+}
+
+.navbar-toggle {
+    font-size: 24px;
+}
+
+.search-container {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.search-container input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+}
+
+.search-container button {
+    background-color: #0C234B;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+/* Hero Grid Layout */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 2fr 20%;
+    align-items: center;
+    gap: 20px;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 5%; 
+    left: 5%; 
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    width: 90%; 
+    font-size: clamp(2px, 1vw, 20px); 
+}
+
+.small-image {
+    position: relative;
+}
+
+.small-image-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.small-image img {
+    width: 100%;
+    height: auto;
+}
+
+.small-image-text {
+    position: absolute;
+    bottom: 10%; 
+    left: 5%; 
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    width: 90%; 
+    font-size: clamp(0.5px, 0.5vw, 10px); 
+}
+
+.news-article video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.news-briefing h2{
+    text-align: center;
+}
+
+.news-grid, .recommended-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.news-article, .recommended-article {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-article img, .recommended-article img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.news-article h3, .recommended-article h3 {
+    margin: 10px 0;
+}
+
+.news-article p, .recommended-article p {
+    margin: 10px 0;
+}
+
+/* Article Page Styles */
+.recommended-articles h2{
+    text-align: center;
+    margin: 50px 0 10px;
+}
+
+.article-header h1, .article-header p {
+    margin: 5px 0;
+}
+
+.article-hero img {
+    width: 90%;
+    height: auto;
+    margin-left: 25px;
+    border-radius: 5px;
+}
+
+.article-body {
+    line-height: 1.8;
+    grid-row: 2;
+    padding-bottom: 20px;
+}
+
+.small-images-section {
+    display: flex;
+    flex-direction: column;
+    grid-row: span 2;
+    margin-block-start: -400px;
+    margin-inline-start: 15px;
+}
+
+.small-images-section h2 {
+    text-align: center;
+}
+
+.small-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.small-images-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: #0C234B;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Search Results Page */
+.search-results {
+    margin: 30px auto;
+    width: 90%;
+}
+
+.search-results h1 {
+    margin-bottom: 10px;
+    color: #0C234B;
+}
+
+#search-query-display {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+.placeholder-image {
+    height: 150px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-style: italic;
+}
+
+#no-results-message {
+    text-align: center;
+    margin: 30px 0;
+    color: #666;
+}
+
+#no-results-message p {
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Article Header Styles */
+.article-header h1 {
+    margin: 5px 0 10px 0; /* Reduced bottom margin */
+}
+
+/* New Article Info Box Styles - Container */
+.article-info-box {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px; /* Gap between tags */
+    padding: 10px 0; /* Padding top/bottom, no side padding needed */
+    margin-bottom: 10px;
+    /* Remove previous background/border */
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid #eee; /* Add subtle separators */
+    border-bottom: 1px solid #eee;
+    margin-inline: 25px;
+
+}
+
+/* Styling for individual tags/pills */
+.meta-info,
+.pokemon-section,
+.weather-section {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Gap between icon/text within a tag */
+    background-color: #dee2e6; /* Very light grey background */
+    border: 1px solid #dee2e6; /* Subtle border */
+    border-radius: 15px; /* Rounded corners for pill shape */
+    padding: 5px 5px; /* Adjusted padding slightly */
+    font-size: 0.78rem; /* Fine-tune font size */
+    color: #495057; /* Text color */
+    /* Remove previous borders/padding */
+    border-right: none;
+    padding-right: 12px; /* Ensure right padding matches left */
+    margin-bottom: 0; /* Remove any bottom margin */
+    line-height: 1.4; /* Adjust line height */
+}
+
+/* Remove hover effects if any were added previously */
+.meta-info:hover,
+.pokemon-section:hover,
+.weather-section:hover {
+    background-color: #1c87f1; 
+}
+
+.pokemon-section img#pokemon-sprite {
+    width: 66px; /* Smaller sprite for tag */
+    height: 66px;
+    margin: 0;
+    image-rendering: pixelated;
+}
+
+.pokemon-section span#pokemon-name {
+    font-weight: 500; /* Medium weight */
+    color: #343a40;
+}
+
+.weather-section img#weather-icon {
+    width: 60px; /* Slightly smaller icon */
+    height: 60px;
+    vertical-align: middle;
+}
+
+.weather-details {
+    gap: 0px; /* Reduce gap between lines */
+    font-size: 1em;
+    color: inherit;
+    line-height: 1.3; /* Adjust line height */
+}
+
+/* Style the location to be more prominent */
+#weather-location {
+    display: inline; /* Ensure it's displayed */
+    font-weight: 600; /* Make location bold */
+    color: #343a40;
+}
+
+/* Remove the "Weather: " prefix and display description on its own line */
+#weather-description::before {
+    content: ""; /* Remove prefix */
+}
+#weather-description {
+     display: block; /* Put description on new line */
+     font-style: italic; /* Italicize description */
+     color: #6c757d; /* Slightly muted color */
+}
+
+#weather-temp {
+    display: block; /* Put temp on new line */
+    font-weight: 500;
+}
+
+/* Hide weather and pokemon info by default */
+#weather-info,
+#pokemon-info {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        
+    }
+
+    .small-image-section {
+        flex-direction: row;
+    }
+
+    .small-image {
+        margin: 0 10px;
+        width: 30%;
+    }
+
+    .small-images-section {
+        margin-block-start: 0;
+    }
+
+    .news-article video.medium-image {
+        height: 200px;
+    }
+
+    .article-body {
+        grid-row: auto; /* Adjust grid placement if needed on mobile */
+    }
+
+    .pokemon-section, .weather-section {
+        margin-top: 15px;
+        padding: 10px;
+    }
+
+    .article-info-box {
+    padding: 10px 0;
+        gap: 8px; /* Adjust gap */
+    }
+
+    .meta-info,
+    .pokemon-section,
+    .weather-section {
+        font-size: 0.75rem; /* Slightly smaller on mobile */
+        padding: 4px 8px; /* Adjust padding */
+    }
+
+    .weather-details {
+        line-height: 1.2; /* Adjust line height for mobile */
+    }      
+}
+
+
+
+

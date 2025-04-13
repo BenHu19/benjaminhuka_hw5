@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeNews Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\utility-styles.css">
+    <link rel="stylesheet" href="css\admin-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghZ+ZmzWT06R5v6NSk3ZUfsH6FNEDepLx9hPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/visualContent.js"></script>
+    <script src="js/article.js"></script>
+    <script src="js/admin.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-toggle">
+            <a href="article.html" title="hamburger-link"><i class="fa-solid fa-bars"></i></a>
+        </div>
+        <div class="navbar-logo">
+            <a href="index.html">
+                <img src="images\logo.png" alt="BeNews Website Logo">
+            </a>
+        </div>
+        <div class="navbar-links">
+            <a href="index.html">Home</a>
+            <a href="article.html">Latest News</a>
+            <a href="admin.html" class="active">Admin</a>
+        </div>
+    </nav>
+
+    <main class="admin-container">
+        <h1>BeNews Admin Panel</h1>
+        
+        <section class="admin-section">
+            <h2>Add New Article</h2>
+            <form id="article-form" class="article-form">
+                <div class="form-group">
+                    <label for="article-title">Article Title</label>
+                    <input type="text" id="article-title" name="article-title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="article-description">Article Description</label>
+                    <textarea id="article-description" name="article-description" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="image-name">Image Name (e.g., image.jpg)</label>
+                    <input type="text" id="image-name" name="image-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="image-description">Image Description</label>
+                    <input type="text" id="image-description" name="image-description" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="file-type">File Type</label>
+                    <select id="file-type" name="file-type" required>
+                        <option value="image">Image</option>
+                        <option value="video">Video</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">Add Article</button>
+            </form>
+        </section>
+        
+        <section class="admin-section">
+            <h2>All Articles</h2>
+            <div class="articles-list" id="articles-list">
+                <!-- Articles will be loaded here dynamically -->
+                <div class="loading">Loading articles...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="copyright">
+            <p>© BeNews 2025</p>
+        </div>
+    </footer>
+</body>
+</html>
